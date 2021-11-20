@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import {
   withScriptjs,
   withGoogleMap,
@@ -28,6 +29,7 @@ const MyMapComponent = compose(
 ));
 
 function Step4(props) {
+
   return (
     <>
       <h3 className="text-center">Choose Your Location</h3>

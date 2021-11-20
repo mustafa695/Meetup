@@ -1,8 +1,8 @@
 import { message } from 'antd';
 import { useHistory } from 'react-router';
 import { auth } from '../config/firebase-config';
-import { db } from '../config/firebase-config';
 import { useEffect, useState } from 'react';
+import {dbs} from '../config/firebase-config'
 import Header from './Header';
 // import Slider from 'react-slick';
 import CardView from '../Components/CardView'
@@ -14,22 +14,18 @@ function Meeting() {
  
   let history = useHistory();
   useEffect(() => {
-    db.child('firedata')
-      .get()
-      .then((snapshot) => {
-        if (snapshot.exists()) {
-          setUserData(snapshot.val());
-        } else {
-          setUserData();
-        }
-      });
-      let id = localStorage.getItem('userId');
-       setUid(id);
+
+    // dbs.collection('firedata').get()
+    // .then((data) => data.docs.map(i => setUserData(i.data())))
+    
+    let id = localStorage.getItem('userId');
+    setUid(id);
   }, []);
+
   useEffect(() => {
   
     auth.onAuthStateChanged((user) => {
-      setSenderId(user.uid)
+      setSenderId(user?.uid)
     })
   }, [])
   const logout = () => {
@@ -41,6 +37,16 @@ function Meeting() {
   };
 
  
+    // db.child('firedata')
+    //   .get()
+    //   .then((snapshot) => {
+    //     if (snapshot.exists()) {
+    //       setUserData(snapshot.val());
+    //     } else {
+    //       setUserData();
+    //     }
+    //   });
+     
   return (
     <>
       <Header />

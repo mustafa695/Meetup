@@ -1,3 +1,14 @@
+# User Login Access
+
+Test Users for Facebook Login
+
+Same for all user Password is: Mus560479
+
+# Email: 
+       william_ndatloe_shane@tfbnw.net
+       salman_fufipyd_khan@tfbnw.net
+       henry_jadvuar_john@tfbnw.net
+       
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

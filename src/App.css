@@ -233,7 +233,7 @@ P {
 }
 .spinner-border {
   position: absolute;
-  left: 50%;
+  left: 80%;
 }
 
 .request {
@@ -259,4 +259,93 @@ img.img-request {
   object-fit: cover;
   border-radius: 92px;
   margin: 20px auto 0;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #000 !important;
+  font-size: 18px !important;
+  font-weight: 500;
+}
+.card-for-request {
+  background: rgb(245 245 220);
+  border-radius: 18px;
+  max-width: 40%;
+  padding: 20px;
+  margin: 1.8rem auto 0;
+  box-shadow: 2px 0px 14px 0px rgb(127 127 127 / 59%);
+}
+.card-for-request h3 {
+  font-family: inherit;
+  font-size: 36px;
+  margin-top: 5px;
+  font-weight: 900;
+}
+.card-for-request .btn-warning {
+  color: #fff !important;
+  background-color: rgb(255 100 10) !important;
+  border-color: rgb(255 100 10) !important;
+}
+
+.accept-cards {
+  background: rgb(221 221 221);
+  padding: 20px;
+  box-shadow: -1px 7px 6px 1px rgb(0 0 0 / 32%);
+  max-width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  border-radius: 20px;
+  transition: 0.5s all ease;
+}
+.accept-cards:hover {
+  background: rgb(255 228 114);
+  transform: translateY(15px);
+  box-shadow: 2px 5px 3px 2px rgb(0 0 0 / 20%);
+  cursor: pointer;
+}
+.accept-cards h3{
+  font-size: 32px;
+  font-weight: bold;
+  padding: 12px 0 0;
+  margin-bottom: 5px;
+}
+
+#single_View .slick-next:before, .slick-prev:before {
+  font-size: 20px;
+  line-height: 1;
+  opacity: 1 !important;
+  color: #fff !important;
+}
+#single_View .slides_images {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+#single_View .slick-prev{
+  left: 15px !important;
+  z-index: 99 !important;
+}
+#single_View .slick-next{
+  right: 15px !important;
+  z-index: 99 !important;
+}
+#single_View h3{
+  font-weight: 900;
+  font-size: 32px;
+  /* font-family: Georgia, 'Times New Roman', Times, serif; */
+}
+#single_View h2{
+  font-weight: 500;
+}
+#single_View li{
+  list-style-type: square;
+  font-size: 20px;
+}
+#single_View .spinner-border {
+  position: absolute;
+  left: 50%;
+}
+#single_View .spinner-border {
+  width: 2.5rem;
+  height: 2.5rem;
 }

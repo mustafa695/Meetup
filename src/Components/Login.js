@@ -9,13 +9,16 @@ function Login() {
   const loginWithFB = async (provider) => {
     const res = await socialMediaAuth(provider);
     console.log(res, 'Result');
-    if(res){
+    if(res.multiFactor.user){
       auth.onAuthStateChanged((user) => {
-        localStorage.setItem('userId', user.uid);
+        history.push('/home')
+        localStorage.setItem('userId', user?.uid);
         message.success('Login Successfully..')
       })
       
-      history.push('/home')
+    }
+    else{
+      message.warn("Something Wen Wrong...")
     }
   };
 
